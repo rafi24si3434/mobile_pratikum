@@ -14,9 +14,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.UnluckyyyApps">
         <activity
-            android:name=".RegisterActivity"
+            android:name=".pertemuan_9.NinthActivity"
             android:exported="false" />
-        <!-- MAIN ACTIVITY -->
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false" /> <!-- MAIN ACTIVITY -->
         <activity
             android:name=".MainActivity"
             android:exported="false" /> <!-- SPLASH (LAUNCHER) -->
@@ -32,9 +34,6 @@
         <activity
             android:name=".BaseActivity"
             android:exported="false" /> <!-- AUTH -->
-        <activity
-            android:name=".AuthActivity"
-            android:exported="false" /> <!-- PERTEMUAN 2 -->
         <activity
             android:name=".pertemuan_2.SecondActivity"
             android:exported="false" /> <!-- PERTEMUAN 3 -->

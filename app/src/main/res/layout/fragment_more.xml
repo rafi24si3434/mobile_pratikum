@@ -4,236 +4,226 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#1a1a2e"
+    android:background="#0F172A"
     tools:context=".More.MoreFragment">
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:scrollbars="none">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <!-- Cover Header -->
+            <!-- HEADER -->
             <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="160dp"
-                android:background="#C1BC15">
+                android:layout_height="220dp"
+                android:background="#2563EB">
 
+                <!-- Badge -->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="top|start"
                     android:layout_margin="16dp"
-                    android:text="BINA DESA APP"
-                    android:textColor="#1a1a2e"
-                    android:textSize="11sp"
+                    android:text="PROFILE PORTFOLIO"
+                    android:textColor="@android:color/white"
                     android:textStyle="bold"
+                    android:textSize="11sp"
                     android:background="#33000000"
-                    android:paddingHorizontal="10dp"
-                    android:paddingVertical="4dp" />
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="6dp"/>
 
-                <!-- Avatar lingkaran -->
+                <!-- Avatar -->
                 <LinearLayout
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
                     android:layout_gravity="bottom|center_horizontal"
-                    android:layout_marginBottom="-40dp"
+                    android:layout_marginBottom="-55dp"
                     android:background="@drawable/circle_avatar_bg"
                     android:gravity="center"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:elevation="8dp">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="MR"
-                        android:textColor="#1a1a2e"
-                        android:textSize="24sp"
-                        android:textStyle="bold" />
+                        android:textColor="#2563EB"
+                        android:textStyle="bold"
+                        android:textSize="34sp"/>
                 </LinearLayout>
+
             </FrameLayout>
 
-            <!-- Body -->
+            <!-- CONTENT -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:padding="20dp"
-                android:paddingTop="56dp">
+                android:paddingTop="70dp">
 
-                <!-- Nama -->
+                <!-- NAME -->
                 <TextView
+                    android:id="@+id/tvName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Muhammad Rafi"
                     android:textColor="@android:color/white"
-                    android:textSize="22sp"
                     android:textStyle="bold"
-                    android:gravity="center"
-                    android:layout_marginBottom="8dp" />
+                    android:textSize="28sp"
+                    android:gravity="center"/>
 
-                <!-- Badge Kelas -->
+                <!-- STATUS -->
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Kelas 2 SIA"
-                    android:textColor="#1a1a2e"
-                    android:textSize="12sp"
-                    android:textStyle="bold"
-                    android:background="#C1BC15"
-                    android:paddingHorizontal="16dp"
-                    android:paddingVertical="6dp"
-                    android:layout_gravity="center"
-                    android:layout_marginBottom="20dp" />
-
-                <!-- Grid Info 2 kolom -->
-                <LinearLayout
+                    android:id="@+id/tvStatus"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginBottom="10dp">
+                    android:text="Mahasiswa Sistem Informasi Semester 4"
+                    android:textColor="#94A3B8"
+                    android:textSize="14sp"
+                    android:gravity="center"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="24dp"/>
 
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:orientation="vertical"
-                        android:background="#0D0D1A"
-                        android:padding="14dp"
-                        android:layout_marginEnd="5dp">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="NAMA LENGKAP"
-                            android:textColor="#66FFFFFF"
-                            android:textSize="10sp"
-                            android:textStyle="bold"
-                            android:layout_marginBottom="4dp" />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Muhammad Rafi"
-                            android:textColor="@android:color/white"
-                            android:textSize="13sp"
-                            android:textStyle="bold" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:orientation="vertical"
-                        android:background="#0D0D1A"
-                        android:padding="14dp"
-                        android:layout_marginStart="5dp">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="KELAS"
-                            android:textColor="#66FFFFFF"
-                            android:textSize="10sp"
-                            android:textStyle="bold"
-                            android:layout_marginBottom="4dp" />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="2 SIA"
-                            android:textColor="@android:color/white"
-                            android:textSize="13sp"
-                            android:textStyle="bold" />
-                    </LinearLayout>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginBottom="10dp">
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:orientation="vertical"
-                        android:background="#0D0D1A"
-                        android:padding="14dp"
-                        android:layout_marginEnd="5dp">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="PROGRAM"
-                            android:textColor="#66FFFFFF"
-                            android:textSize="10sp"
-                            android:textStyle="bold"
-                            android:layout_marginBottom="4dp" />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Bina Desa"
-                            android:textColor="@android:color/white"
-                            android:textSize="13sp"
-                            android:textStyle="bold" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:orientation="vertical"
-                        android:background="#0D0D1A"
-                        android:padding="14dp"
-                        android:layout_marginStart="5dp">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="BIDANG"
-                            android:textColor="#66FFFFFF"
-                            android:textSize="10sp"
-                            android:textStyle="bold"
-                            android:layout_marginBottom="4dp" />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Pariwisata"
-                            android:textColor="@android:color/white"
-                            android:textSize="13sp"
-                            android:textStyle="bold" />
-                    </LinearLayout>
-                </LinearLayout>
-
-                <!-- Full width item -->
+                <!-- ABOUT -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:background="#0D0D1A"
-                    android:padding="14dp"
-                    android:layout_marginBottom="20dp">
+                    android:background="#111827"
+                    android:padding="18dp"
+                    android:layout_marginBottom="14dp">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="FOKUS KEGIATAN"
-                        android:textColor="#66FFFFFF"
-                        android:textSize="10sp"
+                        android:text="ABOUT ME"
+                        android:textColor="#60A5FA"
                         android:textStyle="bold"
-                        android:layout_marginBottom="4dp" />
+                        android:textSize="11sp"
+                        android:layout_marginBottom="8dp"/>
+
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:id="@+id/tvAbout"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Homestay &amp; Wisata Desa"
+                        android:text="Saya adalah mahasiswa Sistem Informasi semester 4 yang memiliki minat besar dalam pengembangan aplikasi, UI/UX Design, dan web development. Saya telah mengerjakan beberapa project kampus menggunakan Laravel dan CodeIgniter."
                         android:textColor="@android:color/white"
-                        android:textSize="13sp"
-                        android:textStyle="bold" />
+                        android:textSize="14sp"
+                        android:lineSpacingExtra="5dp"/>
                 </LinearLayout>
 
+                <!-- SKILL -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="14dp">
+
+                    <!-- Laravel -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:background="#1E293B"
+                        android:padding="18dp"
+                        android:layout_marginEnd="6dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Laravel"
+                            android:textColor="@android:color/white"
+                            android:textStyle="bold"
+                            android:textSize="18sp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Framework"
+                            android:textColor="#94A3B8"
+                            android:textSize="11sp"/>
+                    </LinearLayout>
+
+                    <!-- CodeIgniter -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:background="#1E293B"
+                        android:padding="18dp"
+                        android:layout_marginStart="6dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="CodeIgniter"
+                            android:textColor="@android:color/white"
+                            android:textStyle="bold"
+                            android:textSize="18sp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Framework"
+                            android:textColor="#94A3B8"
+                            android:textSize="11sp"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- EXPERIENCE -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="#111827"
+                    android:padding="18dp"
+                    android:layout_marginBottom="18dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="PROJECT EXPERIENCE"
+                        android:textColor="#60A5FA"
+                        android:textStyle="bold"
+                        android:textSize="11sp"
+                        android:layout_marginBottom="10dp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="• Design Pengalaman Pengguna (UI/UX)\n• Sistem Informasi Berbasis Web\n• CRUD Application Laravel\n• Website Kampus CodeIgniter\n• Responsive Web Design"
+                        android:textColor="@android:color/white"
+                        android:textSize="14sp"
+                        android:lineSpacingExtra="6dp"/>
+                </LinearLayout>
+
+                <!-- CONTACT BUTTON -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnContact"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:text="CONTACT ME"
+                    android:textAllCaps="false"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/white"
+                    android:backgroundTint="#2563EB"
+                    app:cornerRadius="14dp"/>
+
             </LinearLayout>
+
         </LinearLayout>
+
     </androidx.core.widget.NestedScrollView>
+
 </FrameLayout>

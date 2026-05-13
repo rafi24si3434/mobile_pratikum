@@ -1,15 +1,14 @@
 package com.example.unluckyyyapps
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
+import com.example.unluckyyyapps.Home.HomeFragment
 import com.example.unluckyyyapps.Message.MessageFragment
 import com.example.unluckyyyapps.More.MoreFragment
-import com.example.unluckyyyapps.Home.HomeFragment
 import com.example.unluckyyyapps.databinding.ActivityBaseBinding
 
 class BaseActivity : AppCompatActivity() {
@@ -18,16 +17,6 @@ class BaseActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        // ✅ CEK LOGIN DI AWAL
-        val sharedPref = getSharedPreferences("user_pref", MODE_PRIVATE)
-        val isLogin = sharedPref.getBoolean("isLogin", false)
-
-        if (!isLogin) {
-            startActivity(Intent(this, AuthActivity::class.java))
-            finish()
-            return
-        }
 
         enableEdgeToEdge()
 
@@ -40,7 +29,7 @@ class BaseActivity : AppCompatActivity() {
             insets
         }
 
-        // Fragment default (biar tidak reload terus)
+        // Fragment default
         if (savedInstanceState == null) {
             replaceFragment(HomeFragment())
         }

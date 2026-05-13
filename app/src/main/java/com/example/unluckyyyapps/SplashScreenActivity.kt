@@ -20,36 +20,14 @@ class SplashScreenActivity : AppCompatActivity() {
 
             delay(2000)
 
-            val sharedPref =
-                getSharedPreferences(
-                    "user_pref",
-                    MODE_PRIVATE
+            // LANGSUNG KE BASE ACTIVITY
+            startActivity(
+                Intent(
+                    this@SplashScreenActivity,
+                    BaseActivity::class.java
                 )
+            )
 
-            val isLogin =
-                sharedPref.getBoolean(
-                    "isLogin",
-                    false
-                )
-
-            // JIKA SUDAH LOGIN -> LANGSUNG KE BINA DESA
-            val intent =
-                if (isLogin) {
-
-                    Intent(
-                        this@SplashScreenActivity,
-                        BinaDesa::class.java
-                    )
-
-                } else {
-
-                    Intent(
-                        this@SplashScreenActivity,
-                        AuthActivity::class.java
-                    )
-                }
-
-            startActivity(intent)
             finish()
         }
     }

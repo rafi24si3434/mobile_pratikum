@@ -2,10 +2,9 @@
 <androidx.core.widget.NestedScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/ic_home">
+    android:background="#F4F7FB">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -13,60 +12,59 @@
         android:orientation="vertical"
         android:padding="16dp">
 
-        <!-- Hero Banner -->
+        <!-- HEADER CARD -->
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            app:cardBackgroundColor="#0F6E56"
-            app:cardCornerRadius="24dp"
-            app:cardElevation="8dp">
+            android:layout_marginBottom="12dp"
+            app:cardCornerRadius="28dp"
+            app:cardElevation="8dp"
+            app:cardBackgroundColor="#2563EB">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="24dp">
+                android:padding="28dp">
 
-                <com.google.android.material.textview.MaterialTextView
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="✦ PROGRAM BINA DESA"
-                    android:textColor="#AAFFD8"
-                    android:textSize="11sp"
+                    android:text="✦ ABOUT ME"
+                    android:textColor="#BFDBFE"
                     android:textStyle="bold"
-                    android:letterSpacing="0.15"
-                    android:layout_marginBottom="8dp" />
+                    android:textSize="12sp"
+                    android:layout_marginBottom="10dp"/>
 
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/tv_message_title"
+                <TextView
+                    android:id="@+id/tvMessageTitle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Pariwisata &amp;\nHomestay Desa"
+                    android:text="Muhammad Rafi"
                     android:textColor="@android:color/white"
-                    android:textSize="28sp"
                     android:textStyle="bold"
-                    android:lineSpacingExtra="4dp"
-                    android:layout_marginBottom="8dp" />
+                    android:textSize="30sp"/>
 
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/tv_message_body"
+                <TextView
+                    android:id="@+id/tvMessageBody"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Bersama Membangun Desa, Menjaga Alam, Menyambut Dunia"
-                    android:textColor="#CCFFF0"
-                    android:textSize="13sp" />
+                    android:text="Mahasiswa Sistem Informasi Semester 4"
+                    android:textColor="#DBEAFE"
+                    android:textSize="15sp"
+                    android:layout_marginTop="6dp"/>
+
             </LinearLayout>
+
         </com.google.android.material.card.MaterialCardView>
 
-        <!-- Main Card -->
+        <!-- MAIN CONTENT -->
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            app:cardBackgroundColor="@android:color/white"
-            app:cardCornerRadius="24dp"
-            app:cardElevation="12dp">
+            app:cardCornerRadius="28dp"
+            app:cardElevation="10dp"
+            app:cardBackgroundColor="@android:color/white">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -74,55 +72,62 @@
                 android:orientation="vertical"
                 android:padding="24dp">
 
-                <!-- Icon Row -->
+                <!-- FOTO PROFILE -->
+                <!-- FOTO PROFILE -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
                     android:gravity="center"
-                    android:layout_marginBottom="20dp">
+                    android:layout_marginBottom="24dp">
 
-                    <ImageView
-                        android:id="@+id/iv_message_icon"
-                        android:layout_width="56dp"
-                        android:layout_height="56dp"
-                        android:src="@drawable/ceklis"
-                        android:background="@drawable/ic_home"
-                        android:alpha="0.85"
-                        app:tint="#10B981"
-                        android:contentDescription="Message Icon" />
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="130dp"
+                        android:layout_height="130dp"
+                        app:cardCornerRadius="65dp"
+                        app:cardElevation="8dp"
+                        app:cardUseCompatPadding="true">
+
+                        <ImageView
+                            android:id="@+id/ivMessageIcon"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/chatgpt_image_apr_22__2026__04_04_57_pm"
+                            android:scaleType="centerCrop" />
+
+                    </androidx.cardview.widget.CardView>
+
                 </LinearLayout>
 
-                <!-- Tentang Kami -->
-                <com.google.android.material.textview.MaterialTextView
+                <!-- PROFILE -->
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="TENTANG KAMI"
-                    android:textColor="#0F6E56"
-                    android:textSize="11sp"
+                    android:text="PROFILE"
+                    android:textColor="#2563EB"
                     android:textStyle="bold"
-                    android:letterSpacing="0.15"
-                    android:layout_marginBottom="6dp" />
+                    android:textSize="12sp"
+                    android:layout_marginBottom="8dp"/>
 
-                <com.google.android.material.textview.MaterialTextView
+                <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Program Bina Desa Pariwisata &amp; Homestay"
-                    android:textColor="#1a2e1f"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:layout_marginBottom="10dp" />
+                    android:text="Saya adalah mahasiswa Sistem Informasi semester 4 yang memiliki minat besar dalam bidang pengembangan aplikasi dan desain antarmuka pengguna. Saya telah mengerjakan beberapa project kampus berbasis web menggunakan framework Laravel dan CodeIgniter."
+                    android:textColor="#374151"
+                    android:textSize="15sp"
+                    android:lineSpacingExtra="5dp"
+                    android:layout_marginBottom="18dp"/>
 
-                <com.google.android.material.textview.MaterialTextView
-                    android:layout_width="match_parent"
+                <!-- SKILL -->
+                <TextView
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Program Bina Desa hadir untuk memberdayakan masyarakat desa melalui pengembangan sektor pariwisata lokal dan pengelolaan homestay berbasis komunitas. Kami percaya setiap desa memiliki keindahan dan keunikan tersendiri yang layak untuk dikenal dunia."
-                    android:textColor="#4a6355"
-                    android:textSize="14sp"
-                    android:lineSpacingExtra="4dp"
-                    android:layout_marginBottom="16dp" />
+                    android:text="SKILL  FRAMEWORK"
+                    android:textColor="#2563EB"
+                    android:textStyle="bold"
+                    android:textSize="12sp"
+                    android:layout_marginBottom="12dp"/>
 
-                <!-- Stats Row -->
+                <!-- SKILL BOX -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -134,24 +139,25 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:orientation="vertical"
-                        android:background="#0F6E56"
-                        android:padding="12dp"
                         android:gravity="center"
+                        android:padding="14dp"
+                        android:background="#2563EB"
                         android:layout_marginEnd="6dp">
 
-                        <com.google.android.material.textview.MaterialTextView
+                        <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="50+"
+                            android:text="Laravel"
                             android:textColor="@android:color/white"
-                            android:textSize="22sp"
-                            android:textStyle="bold" />
-                        <com.google.android.material.textview.MaterialTextView
+                            android:textStyle="bold"
+                            android:textSize="18sp"/>
+
+                        <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Desa Binaan"
-                            android:textColor="#CCFFF0"
-                            android:textSize="10sp" />
+                            android:text="Framework"
+                            android:textColor="#DBEAFE"
+                            android:textSize="11sp"/>
                     </LinearLayout>
 
                     <LinearLayout
@@ -159,64 +165,64 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:orientation="vertical"
-                        android:background="#085041"
-                        android:padding="12dp"
                         android:gravity="center"
-                        android:layout_marginEnd="6dp">
+                        android:padding="14dp"
+                        android:background="#1D4ED8"
+                        android:layout_marginStart="6dp">
 
-                        <com.google.android.material.textview.MaterialTextView
+                        <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="200+"
+                            android:text="CodeIgniter"
                             android:textColor="@android:color/white"
-                            android:textSize="22sp"
-                            android:textStyle="bold" />
-                        <com.google.android.material.textview.MaterialTextView
+                            android:textStyle="bold"
+                            android:textSize="18sp"/>
+
+                        <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Homestay"
-                            android:textColor="#CCFFF0"
-                            android:textSize="10sp" />
+                            android:text="Framework"
+                            android:textColor="#DBEAFE"
+                            android:textSize="11sp"/>
                     </LinearLayout>
 
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:orientation="vertical"
-                        android:background="#1D9E75"
-                        android:padding="12dp"
-                        android:gravity="center">
-
-                        <com.google.android.material.textview.MaterialTextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="5K+"
-                            android:textColor="@android:color/white"
-                            android:textSize="22sp"
-                            android:textStyle="bold" />
-                        <com.google.android.material.textview.MaterialTextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Wisatawan"
-                            android:textColor="#CCFFF0"
-                            android:textSize="10sp" />
-                    </LinearLayout>
                 </LinearLayout>
 
-                <!-- Tombol Aksi -->
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btn_action"
-                    android:layout_width="match_parent"
-                    android:layout_height="56dp"
-                    android:text="MENGERTI"
-                    android:background="@color/material_dynamic_secondary0"
-                    android:textColor="@android:color/white"
-                    android:textSize="16sp"
+                <!-- PROJECT -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PROJECT EXPERIENCE"
+                    android:textColor="#2563EB"
                     android:textStyle="bold"
-                    android:elevation="4dp" />
+                    android:textSize="12sp"
+                    android:layout_marginBottom="10dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="• Design Pengalaman Pengguna (UI/UX)\n• Sistem Informasi Berbasis Web\n• Aplikasi CRUD Laravel\n• Project Kampus Menggunakan CodeIgniter\n• Pengembangan Tampilan Responsive"
+                    android:textColor="#374151"
+                    android:textSize="14sp"
+                    android:lineSpacingExtra="6dp"
+                    android:layout_marginBottom="20dp"/>
+
+                <!-- BUTTON -->
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnAction"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:text="CONTACT ME"
+                    android:textAllCaps="false"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/white"
+                    android:backgroundTint="#2563EB"/>
 
             </LinearLayout>
+
         </com.google.android.material.card.MaterialCardView>
+
     </LinearLayout>
+
 </androidx.core.widget.NestedScrollView>

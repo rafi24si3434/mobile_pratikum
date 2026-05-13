@@ -10,11 +10,11 @@
         android:id="@+id/imageView5"
         android:layout_width="305dp"
         android:layout_height="569dp"
-        android:src="@drawable/chatgpt_image_apr_22__2026__08_29_16_pm"
-        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/chatgpt_image_apr_22__2026__04_04_57_pm"
         app:layout_constraintBottom_toTopOf="@id/loadingBar"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ProgressBar
         android:id="@+id/loadingBar"
