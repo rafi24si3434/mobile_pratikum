@@ -6,13 +6,27 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import com.example.unluckyyyapps.R
 import com.example.unluckyyyapps.databinding.FragmentMessageBinding
 
 class MessageFragment : Fragment() {
 
+    // VIEW BINDING
     private var _binding: FragmentMessageBinding? = null
     private val binding get() = _binding!!
+
+    // MESSAGE DATA
+    private val messageList = listOf(
+        MessageModel("Alya", "Halo! Apa kabar?", "https://api.dicebear.com/7.x/avataaars/png?seed=Alya"),
+        MessageModel("Budi", "Sudah makan?", "https://api.dicebear.com/7.x/avataaars/png?seed=Budi"),
+        MessageModel("Citra", "Jangan lupa tugasnya ya!", "https://api.dicebear.com/7.x/avataaars/png?seed=Citra"),
+        MessageModel("Dika", "Besok kita rapat jam 9", "https://api.dicebear.com/7.x/avataaars/png?seed=Dika"),
+        MessageModel("Eka", "Nice job kemarin!", "https://api.dicebear.com/7.x/avataaars/png?seed=Eka"),
+        MessageModel("Fajar", "Lagi ngapain?", "https://api.dicebear.com/7.x/avataaars/png?seed=Fajar"),
+        MessageModel("Gita", "Boleh minta tolong?", "https://api.dicebear.com/7.x/avataaars/png?seed=Gita"),
+        MessageModel("Hana", "Lihat email ya", "https://api.dicebear.com/7.x/avataaars/png?seed=Hana"),
+        MessageModel("Irfan", "Oke noted", "https://api.dicebear.com/7.x/avataaars/png?seed=Irfan"),
+        MessageModel("Joko", "Sampai jumpa besok", "https://api.dicebear.com/7.x/avataaars/png?seed=Joko")
+    )
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -20,40 +34,40 @@ class MessageFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
 
-        _binding = FragmentMessageBinding.inflate(inflater, container, false)
+        // INFLATE BINDING
+        _binding = FragmentMessageBinding.inflate(
+            inflater,
+            container,
+            false
+        )
 
         return binding.root
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+    override fun onViewCreated(
+        view: View,
+        savedInstanceState: Bundle?
+    ) {
         super.onViewCreated(view, savedInstanceState)
 
-        // =================================
-        // HEADER
-        // =================================
+        // SET ADAPTER
+        val adapter = MessageAdapter(
+            requireContext(),
+            messageList
+        )
 
-        binding.tvMessageTitle.text = "Muhammad Rafi"
+        binding.listMessageItems.adapter =
+            adapter
 
-        binding.tvMessageBody.text =
-            "Mahasiswa Sistem Informasi Semester 4 yang memiliki minat besar dalam pengembangan aplikasi, UI/UX Design, dan web development menggunakan framework Laravel serta CodeIgniter."
+        // CLICK ITEM
+        binding.listMessageItems.setOnItemClickListener { _, _, position, _ ->
 
-        // =================================
-        // ICON
-        // =================================
-
-        binding.ivMessageIcon.setImageResource(R.drawable.ic_launcher_foreground)
-
-        // =================================
-        // BUTTON
-        // =================================
-
-        binding.btnAction.text = "Hubungi Saya"
-
-        binding.btnAction.setOnClickListener {
+            val selectedMessage =
+                messageList[position]
 
             Toast.makeText(
                 requireContext(),
-                "Terima kasih telah melihat profile saya 🚀",
+                "${selectedMessage.senderName}\n${selectedMessage.messageText}",
                 Toast.LENGTH_SHORT
             ).show()
         }

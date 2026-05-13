@@ -4,7 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ArrayAdapter
+import android.widget.SimpleAdapter
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.unluckyyyapps.databinding.FragmentMoreBinding
@@ -15,22 +15,68 @@ class MoreFragment : Fragment() {
     private var _binding: FragmentMoreBinding? = null
     private val binding get() = _binding!!
 
-    // DATA LIST
-    private val dataList = listOf(
+    // DATA LIST WITH DESC
+    private val dataListWithDesc = listOf(
 
-        "Laravel CRUD App",
-        "CodeIgniter Project",
-        "UI/UX Mobile Design",
-        "Android Kotlin",
-        "Student Information System",
-        "Responsive Web Design",
-        "Material Design",
-        "Bottom Navigation",
-        "RecyclerView Project",
-        "Database MySQL",
-        "API Integration",
-        "Login Authentication"
+        mapOf(
+            "title" to "Laravel CRUD App",
+            "desc" to "Aplikasi CRUD menggunakan Laravel"
+        ),
 
+        mapOf(
+            "title" to "CodeIgniter Project",
+            "desc" to "Framework project kampus modern"
+        ),
+
+        mapOf(
+            "title" to "UI/UX Mobile Design",
+            "desc" to "Design tampilan Android modern"
+        ),
+
+        mapOf(
+            "title" to "Android Kotlin",
+            "desc" to "Pengembangan aplikasi Kotlin"
+        ),
+
+        mapOf(
+            "title" to "Student Information System",
+            "desc" to "Sistem informasi mahasiswa"
+        ),
+
+        mapOf(
+            "title" to "Responsive Web Design",
+            "desc" to "Website responsive semua device"
+        ),
+
+        mapOf(
+            "title" to "Material Design",
+            "desc" to "Implementasi material components"
+        ),
+
+        mapOf(
+            "title" to "Bottom Navigation",
+            "desc" to "Navigasi modern Android"
+        ),
+
+        mapOf(
+            "title" to "RecyclerView Project",
+            "desc" to "Menampilkan data dinamis"
+        ),
+
+        mapOf(
+            "title" to "Database MySQL",
+            "desc" to "Koneksi database MySQL"
+        ),
+
+        mapOf(
+            "title" to "API Integration",
+            "desc" to "Integrasi REST API Android"
+        ),
+
+        mapOf(
+            "title" to "Login Authentication",
+            "desc" to "Sistem login dan register"
+        )
     )
 
     override fun onCreateView(
@@ -55,30 +101,43 @@ class MoreFragment : Fragment() {
     ) {
         super.onViewCreated(view, savedInstanceState)
 
-        // ARRAY ADAPTER
-        val adapter = ArrayAdapter(
+        // SIMPLE ADAPTER
+        val adapter = SimpleAdapter(
 
             requireContext(),
 
-            android.R.layout.simple_list_item_1,
+            dataListWithDesc,
 
-            dataList
+            android.R.layout.simple_list_item_2,
 
+            arrayOf(
+                "title",
+                "desc"
+            ),
+
+            intArrayOf(
+                android.R.id.text1,
+                android.R.id.text2
+            )
         )
 
-        // SET ADAPTER KE LISTVIEW
+        // SET ADAPTER
         binding.listViewItems.adapter = adapter
 
-        // CLICK ITEM LIST
+        // CLICK LIST ITEM
         binding.listViewItems.setOnItemClickListener { _, _, position, _ ->
 
-            val selectedItem = dataList[position]
+            val selectedItem = dataListWithDesc[position]
+
+            val title = selectedItem["title"]
+
+            val desc = selectedItem["desc"]
 
             Toast.makeText(
 
                 requireContext(),
 
-                "Kamu memilih: $selectedItem",
+                "Kamu memilih:\n$title\n$desc",
 
                 Toast.LENGTH_SHORT
 
