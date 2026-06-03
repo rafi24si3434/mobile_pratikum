@@ -132,6 +132,22 @@
                 app:layout_columnWeight="1"
                 app:layout_gravity="fill_horizontal" />
 
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnPertemuan10"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:text="🔥\nPertemuan 10"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:gravity="center"
+                android:padding="12dp"
+                android:backgroundTint="#9333EA"
+                app:cornerRadius="20dp"
+                app:layout_columnWeight="1"
+                app:layout_gravity="fill_horizontal" />
+
         </androidx.gridlayout.widget.GridLayout>
 
     </LinearLayout>

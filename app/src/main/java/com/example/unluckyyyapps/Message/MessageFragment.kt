@@ -10,11 +10,9 @@ import com.example.unluckyyyapps.databinding.FragmentMessageBinding
 
 class MessageFragment : Fragment() {
 
-    // VIEW BINDING
     private var _binding: FragmentMessageBinding? = null
     private val binding get() = _binding!!
 
-    // MESSAGE DATA
     private val messageList = listOf(
         MessageModel("Alya", "Halo! Apa kabar?", "https://api.dicebear.com/7.x/avataaars/png?seed=Alya"),
         MessageModel("Budi", "Sudah makan?", "https://api.dicebear.com/7.x/avataaars/png?seed=Budi"),
@@ -34,7 +32,6 @@ class MessageFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
 
-        // INFLATE BINDING
         _binding = FragmentMessageBinding.inflate(
             inflater,
             container,
@@ -50,20 +47,16 @@ class MessageFragment : Fragment() {
     ) {
         super.onViewCreated(view, savedInstanceState)
 
-        // SET ADAPTER
         val adapter = MessageAdapter(
             requireContext(),
             messageList
         )
 
-        binding.listMessageItems.adapter =
-            adapter
+        binding.listMessageItems.adapter = adapter
 
-        // CLICK ITEM
         binding.listMessageItems.setOnItemClickListener { _, _, position, _ ->
 
-            val selectedMessage =
-                messageList[position]
+            val selectedMessage = messageList[position]
 
             Toast.makeText(
                 requireContext(),
@@ -75,7 +68,6 @@ class MessageFragment : Fragment() {
 
     override fun onDestroyView() {
         super.onDestroyView()
-
         _binding = null
     }
 }

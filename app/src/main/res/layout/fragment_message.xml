@@ -8,16 +8,12 @@
     android:background="#F4F7FB"
     tools:context=".Message.MessageFragment">
 
-    <!-- APP BAR -->
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#3908BF"
-        android:elevation="4dp"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
+        android:background="#3908BF"/>
 
-    <!-- CONTENT -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -25,22 +21,11 @@
         android:padding="12dp"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-        <!-- HEADER CARD -->
-        <com.google.android.material.card.MaterialCardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="14dp"
-            app:cardBackgroundColor="#3908BF"
-            app:cardCornerRadius="22dp"
-            app:cardElevation="4dp"/>
-
-        <!-- LIST VIEW -->
         <ListView
             android:id="@+id/listMessageItems"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@android:color/white"
-            android:clipToPadding="false"
             android:divider="#E5E7EB"
             android:dividerHeight="1dp"
             android:padding="4dp"/>

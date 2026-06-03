@@ -6,14 +6,17 @@
         android:id="@+id/action_search"
         android:title="Search"
         android:icon="@android:drawable/ic_menu_search"
-        app:iconTint="#3908BF"
-        app:showAsAction="ifRoom" />
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/action_tutorial"
+        android:title="Tutorial"
+        android:icon="@android:drawable/ic_menu_help"
+        app:showAsAction="always"/>
 
     <item
         android:id="@+id/action_settings"
         android:title="Settings"
-        android:icon="@android:drawable/ic_menu_preferences"
-        app:iconTint="#3908BF"
-        app:showAsAction="never" />
+        app:showAsAction="never"/>
 
 </menu>

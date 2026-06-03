@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import com.example.unluckyyyapps.R
-
+import com.example.unluckyyyapps.pertemuan_10.TenthActivity
 import com.example.unluckyyyapps.pertemuan_2.SecondActivity
 import com.example.unluckyyyapps.pertemuan_3.ThirdActivity
 import com.example.unluckyyyapps.pertemuan_4.FourthActivity
@@ -48,6 +48,10 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
 
         view.findViewById<View>(R.id.btnPertemuan9).setOnClickListener {
             startActivity(Intent(requireContext(), NinthActivity::class.java))
+        }
+
+        view.findViewById<View>(R.id.btnPertemuan10).setOnClickListener {
+            startActivity(Intent(requireContext(), TenthActivity::class.java))
         }
     }
 }
