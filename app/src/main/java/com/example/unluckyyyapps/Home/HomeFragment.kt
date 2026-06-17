@@ -18,6 +18,7 @@ import com.example.unluckyyyapps.pertemuan_4.FourthActivity
 import com.example.unluckyyyapps.pertemuan_5.FifthActivity
 import com.example.unluckyyyapps.pertemuan_7.SeventhActivity
 import com.example.unluckyyyapps.pertemuan_9.NinthActivity
+import com.example.unluckyyyapps.Home.pertemuan_13.ThirteenthActivity
 import kotlinx.coroutines.launch
 import com.example.unluckyyyapps.data.api.PhotoApiClient
 
@@ -122,6 +123,15 @@ class HomeFragment : Fragment() {
                 Intent(
                     requireContext(),
                     TenthActivity::class.java
+                )
+            )
+        }
+
+        binding.btnPertemuan13.setOnClickListener {
+            startActivity(
+                Intent(
+                    requireContext(),
+                    ThirteenthActivity::class.java
                 )
             )
         }

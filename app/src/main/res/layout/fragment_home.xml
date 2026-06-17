@@ -114,6 +114,17 @@
                     app:cornerRadius="20dp"
                     app:layout_columnWeight="1"/>
 
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnPertemuan13"
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    android:text="📸\nPertemuan 13"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:backgroundTint="#EC4899"
+                    app:cornerRadius="20dp"
+                    app:layout_columnWeight="1"/>
+
             </androidx.gridlayout.widget.GridLayout>
 
             <TextView
